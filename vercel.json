@@ -1,10 +1,9 @@
 {
   "version": 2,
-  "buildCommand": "npm run build",
-  "outputDirectory": "build",
-  "devCommand": "npm start",
-  "installCommand": "npm install",
-  "framework": "create-react-app",
+  "installCommand": "cd frontend && npm install",
+  "buildCommand": "cd frontend && npm run build",
+  "outputDirectory": "frontend/build",
+  "devCommand": "cd frontend && npm start",
   "routes": [
     {
       "src": "/api/(.*)",
@@ -19,4 +18,3 @@
     }
   ]
 }
-

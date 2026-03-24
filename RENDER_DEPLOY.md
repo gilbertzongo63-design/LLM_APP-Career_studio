@@ -1,12 +1,16 @@
 # Render.com Backend Deployment Guide
 
+Ce projet est maintenant organise pour un deploiement GitHub direct :
+- backend sur Render via [render.yaml](c:/Users/GilbertCS26/Documents/BIT/Projects/LLM_APP-main/render.yaml)
+- frontend sur Vercel via [vercel.json](c:/Users/GilbertCS26/Documents/BIT/Projects/LLM_APP-main/vercel.json)
+
 ## Quick Deploy Steps
 
 ### 1. Prepare Your Repository
 Ensure your repo has:
-- `requirements.txt` at the root
-- `Procfile` with command: `uvicorn app.main:app --host 0.0.0.0 --port $PORT`
-- `app/main.py` with FastAPI app
+- `backend/requirements.txt`
+- `backend/app/main.py`
+- `render.yaml`
 
 ### 2. Create Service on Render
 
@@ -18,17 +22,17 @@ Ensure your repo has:
    - **Environment**: `Python 3.11`
    - **Region**: Choose your region
    - **Branch**: `main` or `master`
-   - **Build Command**: `pip install -r requirements.txt`
-   - **Start Command**: `uvicorn app.main:app --host 0.0.0.0 --port $PORT`
+   - **Build Command**: `pip install -r backend/requirements.txt`
+   - **Start Command**: `cd backend && uvicorn app.main:app --host 0.0.0.0 --port $PORT`
 
 ### 3. Add Environment Variables
 
 In Render Dashboard → Your Service → Environment:
 
 ```
-API_KEY=your-secret-api-key-here
 OPENAI_API_KEY=your-openai-key-here
-OPENAI_MODEL=gpt-4
+OPENAI_MODEL=gpt-4o-mini
+API_KEY=your-secret-api-key-here
 LLM_CMD=your-local-llm-command
 ```
 

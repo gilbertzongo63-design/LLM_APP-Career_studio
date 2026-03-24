@@ -101,6 +101,42 @@ cd c:\Users\GilbertCS26\Documents\BIT\Projects\LLM_APP-main\frontend
 cmd /c npm run build
 ```
 
+## Deploiement GitHub -> Render + Vercel
+
+### Backend Render
+
+- Importez le repository GitHub dans Render
+- Render detectera [render.yaml](c:/Users/GilbertCS26/Documents/BIT/Projects/LLM_APP-main/render.yaml)
+- Verifiez ensuite les variables :
+  - `OPENAI_API_KEY`
+  - `OPENAI_MODEL`
+  - `API_KEY` si vous voulez proteger `/api/generate-pdf`
+
+Le backend publiera :
+- `/api/health`
+- `/api/assistant`
+- `/api/generate-pdf`
+
+### Frontend Vercel
+
+- Importez le meme repository GitHub dans Vercel
+- Vous pouvez deployer directement depuis la racine du repo grace a [vercel.json](c:/Users/GilbertCS26/Documents/BIT/Projects/LLM_APP-main/vercel.json)
+- Ajoutez la variable :
+  - `REACT_APP_API_URL=https://votre-backend.onrender.com`
+
+### GitHub Actions optionnel
+
+Les workflows suivants sont deja prets :
+- [deploy-render.yml](c:/Users/GilbertCS26/Documents/BIT/Projects/LLM_APP-main/.github/workflows/deploy-render.yml)
+- [deploy-vercel.yml](c:/Users/GilbertCS26/Documents/BIT/Projects/LLM_APP-main/.github/workflows/deploy-vercel.yml)
+
+Secrets GitHub a definir si vous voulez le deploiement automatique :
+- `RENDER_API_KEY`
+- `RENDER_SERVICE_ID`
+- `VERCEL_TOKEN`
+- `VERCEL_ORG_ID`
+- `VERCEL_PROJECT_ID`
+
 ## Notes
 
 - Le frontend normalise `REACT_APP_API_URL` pour appeler automatiquement `/api/...`
