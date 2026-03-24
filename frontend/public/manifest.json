@@ -1,0 +1,25 @@
+{
+  "short_name": "Career Studio",
+  "name": "Career Studio - CV et lettre de motivation",
+  "icons": [
+    {
+      "src": "career-studio-logo.svg",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "career-studio-logo.svg",
+      "type": "image/svg+xml",
+      "sizes": "192x192"
+    },
+    {
+      "src": "career-studio-logo.svg",
+      "type": "image/svg+xml",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Career Studio logo">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#22c55e"/>
+    </linearGradient>
+  </defs>
+  <rect x="18" y="18" width="220" height="220" rx="52" fill="url(#bg)"/>
+  <path d="M70 78h78l38 38v62c0 10-8 18-18 18H70c-10 0-18-8-18-18V96c0-10 8-18 18-18z" fill="#ffffff" opacity="0.96"/>
+  <path d="M148 78v38h38" fill="none" stroke="url(#accent)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M78 126h72M78 152h102M78 178h84" stroke="#1e293b" stroke-width="12" stroke-linecap="round" opacity="0.9"/>
+  <circle cx="86" cy="126" r="6" fill="#2563eb"/>
+  <circle cx="86" cy="152" r="6" fill="#2563eb"/>
+  <circle cx="86" cy="178" r="6" fill="#2563eb"/>
+  <text x="128" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#ffffff">Career Studio</text>
+</svg>
