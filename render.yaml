@@ -9,7 +9,7 @@ services:
     healthCheckPath: /api/health
     envVars:
       - key: PYTHON_VERSION
-        value: 3.11
+        value: 3.11.9
       - key: OPENAI_MODEL
         value: gpt-4o-mini
       - key: API_KEY
